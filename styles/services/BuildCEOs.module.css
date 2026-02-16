@@ -1,0 +1,150 @@
+.buildCEOs {
+  padding: 2.5rem 0;
+  background: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+
+.sectionHeader p {
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.comparisonColumn {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.comparisonColumn h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.programList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.programItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.programItem:hover {
+  background: #e2e8f0;
+  transform: translateX(5px);
+}
+
+.iconTraditional {
+  width: 20px;
+  height: 20px;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.iconOak1 {
+  width: 20px;
+  height: 20px;
+  color: #2c5aa0;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.programItem span {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.imageContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.businessImage {
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.businessImage:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .buildCEOs {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2.2rem;
+  }
+  
+  .comparisonColumn {
+    padding: 1.5rem;
+  }
+  
+  .programItem {
+    padding: 0.8rem;
+  }
+}

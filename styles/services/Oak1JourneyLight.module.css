@@ -1,0 +1,303 @@
+.roadmap {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.roadmap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #475569;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding: 40px 0;
+}
+
+.progressBar {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 4px;
+  background: rgba(15, 23, 42, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+.stepWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  opacity: 0.6;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.stepWrapper.active {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.stepWrapper:hover {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.stepCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.stepWrapper.active .stepCircle {
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.25);
+  transform: scale(1.1);
+}
+
+.stepInner {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.stepIcon {
+  font-size: 2rem;
+}
+
+.stepNumber {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.stepContent {
+  margin-top: 30px;
+  text-align: center;
+  max-width: 250px;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.stepDesc {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .steps {
+    gap: 15px;
+  }
+  
+  .stepCircle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .stepInner {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .stepIcon {
+    font-size: 1.5rem;
+  }
+  
+  .stepContent {
+    max-width: 200px;
+  }
+  
+  .stepTitle {
+    font-size: 1.1rem;
+  }
+  
+  .stepDesc {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap {
+    padding: 60px 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .header {
+    margin-bottom: 50px;
+  }
+  
+  .steps {
+    flex-direction: column;
+    gap: 60px;
+    align-items: stretch;
+  }
+  
+  .progressBar {
+    display: none;
+  }
+  
+  .stepWrapper {
+    flex-direction: row;
+    text-align: left;
+    gap: 20px;
+    opacity: 1;
+    transform: none !important;
+  }
+  
+  .stepWrapper.active {
+    transform: none;
+  }
+  
+  .stepCircle {
+    flex-shrink: 0;
+  }
+  
+  .stepContent {
+    margin-top: 0;
+    text-align: left;
+    max-width: none;
+    flex: 1;
+  }
+  
+  .stepNumber {
+    top: -10px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .roadmap {
+    padding: 40px 15px;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .stepCircle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .stepInner {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .stepIcon {
+    font-size: 1.25rem;
+  }
+  
+  .stepNumber {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+  
+  .stepTitle {
+    font-size: 1rem;
+  }
+  
+  .stepDesc {
+    font-size: 0.85rem;
+  }
+}

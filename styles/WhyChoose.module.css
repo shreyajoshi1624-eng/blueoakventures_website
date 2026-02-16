@@ -1,0 +1,150 @@
+/* Why Choose Section */
+.whyChoose {
+  padding: 2.5rem 0;
+  background: 
+    radial-gradient(circle at 35% 25%, rgba(220, 53, 69, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 65% 75%, rgba(220, 53, 69, 0.06) 1px, transparent 1px),
+    linear-gradient(45deg, rgba(220, 53, 69, 0.05) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(220, 53, 69, 0.04) 1px, transparent 1px),
+    linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+  background-size: 95px 95px, 135px 135px, 65px 65px, 85px 85px, 100% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Why Choose Animation - Wave Pattern */
+.whyChoose::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(220, 53, 69, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(220, 53, 69, 0.03) 0%, transparent 50%);
+  animation: wavePattern 18s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes wavePattern {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.whyChoose::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 60% 40%, rgba(44, 90, 160, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(100, 181, 246, 0.05) 0%, transparent 50%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader h2 {
+  color: #2c3e50;
+  background: linear-gradient(135deg, #2c3e50, #2c5aa0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.valueCard {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(44, 90, 160, 0.1);
+  padding: 2.5rem 2rem;
+  border-radius: 25px;
+  transition: all 0.4s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.valueCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(220, 53, 69, 0.05), transparent);
+  transition: left 0.6s ease;
+}
+
+.valueCard:hover::before {
+  left: 100%;
+}
+
+.valueCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(220, 53, 69, 0.15);
+  border-color: rgba(220, 53, 69, 0.3);
+}
+
+.valueCard h3 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.valueCard p {
+  color: #5a6c7d;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .valueGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .valueGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2.2rem;
+  }
+  
+  .valueCard {
+    padding: 2rem 1.5rem;
+  }
+}
