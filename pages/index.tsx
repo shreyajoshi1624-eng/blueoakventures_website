@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import HeroSection from '../components/HeroSection'
 import Navigation from '../components/Navigation'
-import AnnouncementBar from '../components/AnnouncementBar'
 import ClientEffects from '../components/ClientEffects'
 import HowItWorks from '../components/HowItWorks'
 import Services from '../components/Services'
@@ -21,7 +20,6 @@ export default function Home() {
       
       <ClientEffects />
       <Navigation />
-      <AnnouncementBar />
       <HeroSection />
       <HowItWorks />
       <Services />

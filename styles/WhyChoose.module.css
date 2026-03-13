@@ -2,40 +2,13 @@
 .whyChoose {
   padding: 2.5rem 0;
   background: 
-    radial-gradient(circle at 35% 25%, rgba(13, 115, 119, 0.15) 1px, transparent 1px),
-    radial-gradient(circle at 65% 75%, rgba(244, 196, 48, 0.1) 1px, transparent 1px),
-    linear-gradient(45deg, rgba(13, 115, 119, 0.1) 1px, transparent 1px),
-    linear-gradient(-45deg, rgba(13, 115, 119, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, #0a1929 0%, #0d1b2a 100%);
-  background-size: 95px 95px, 135px 135px, 65px 65px, 85px 85px, 100% 100%;
+    radial-gradient(circle, rgba(150, 150, 150, 0.8) 1px, transparent 1px),
+    radial-gradient(circle, rgba(150, 150, 150, 0.8) 1px, transparent 1px),
+    linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
+  background-size: 30px 30px, 30px 30px, 100% 100%;
+  background-position: 0 0, 15px 15px, 0 0;
   position: relative;
   overflow: hidden;
-}
-
-/* Why Choose Animation - Wave Pattern */
-.whyChoose::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(ellipse at 20% 20%, rgba(220, 53, 69, 0.05) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(220, 53, 69, 0.03) 0%, transparent 50%);
-  animation: wavePattern 18s ease-in-out infinite;
-  z-index: 1;
-}
-
-@keyframes wavePattern {
-  0%, 100% {
-    transform: rotate(0deg) scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: rotate(180deg) scale(1.1);
-    opacity: 0.8;
-  }
 }
 
 .whyChoose::before {
@@ -46,8 +19,8 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 60% 40%, rgba(44, 90, 160, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 40% 60%, rgba(100, 181, 246, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 25% 25%, rgba(44, 90, 160, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(100, 181, 246, 0.03) 0%, transparent 50%);
 }
 
 .container {
@@ -62,8 +35,8 @@
 }
 
 .sectionHeader h2 {
-  color: #2c3e50;
-  background: linear-gradient(135deg, #2c3e50, #2c5aa0);
+  color: #e0e0e0;
+  background: linear-gradient(135deg, #2c5aa0, #64b5f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -81,47 +54,57 @@
 }
 
 .valueCard {
-  background: linear-gradient(135deg, rgba(13, 115, 119, 0.2), rgba(26, 35, 50, 0.8));
+  background: linear-gradient(135deg, #ffffff 0%, #fffef8 100%);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(13, 115, 119, 0.3);
+  border: 2px solid transparent;
+  border-image: linear-gradient(135deg, rgba(44, 90, 160, 0.2), rgba(100, 181, 246, 0.3)) 1;
   padding: 2.5rem 2rem;
   border-radius: 25px;
   transition: all 0.4s ease;
   text-align: center;
   position: relative;
   overflow: hidden;
+  box-shadow: 
+    0 10px 25px rgba(44, 90, 160, 0.08),
+    inset 0 1px 0 rgba(100, 181, 246, 0.1);
 }
 
 .valueCard::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(244, 196, 48, 0.15), transparent);
-  transition: left 0.6s ease;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2c5aa0, #64b5f6);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .valueCard:hover::before {
-  left: 100%;
+  transform: scaleX(1);
 }
 
 .valueCard:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(244, 196, 48, 0.3);
-  border-color: rgba(244, 196, 48, 0.5);
+  box-shadow: 
+    0 20px 40px rgba(100, 181, 246, 0.3),
+    inset 0 1px 0 rgba(44, 90, 160, 0.5);
+  border-color: rgba(100, 181, 246, 0.5);
 }
 
 .valueCard h3 {
-  color: #f4c430;
+  background: linear-gradient(135deg, #2c5aa0, #64b5f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1rem;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
 .valueCard p {
-  color: #b0b0b0;
+  color: #5a6c7d;
   line-height: 1.6;
   font-size: 0.95rem;
   margin: 0;

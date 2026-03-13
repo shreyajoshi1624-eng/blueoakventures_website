@@ -15,7 +15,14 @@ const ServicesHero = () => {
             </p>
             <div className={styles.heroButtons}>
               <button className={styles.btnSecondary}>Know Your Funding Score</button>
-              <button className={styles.btnPrimary}>Apply Now</button>
+              <a 
+                href="https://wa.me/917744841015" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.btnPrimary}
+              >
+                Apply Now
+              </a>
             </div>
           </div>
           <div className={styles.heroImage}>

@@ -66,6 +66,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(13, 115, 119, 0.4);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btnSecondary {

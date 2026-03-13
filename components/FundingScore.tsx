@@ -9,9 +9,10 @@ const FundingScore = () => {
             If Investors Met You Today—Would They Fund You?
           </h2>
           
+          <p className={styles.subHeading}>Get a FREE Funding Score based on:</p>
+          
           <div className={styles.content}>
             <div className={styles.leftColumn}>
-              <p className={styles.subHeading}>Get a FREE Funding Score based on:</p>
               <ul className={styles.criteriaList}>
                 <li>Founder Readiness</li>
                 <li>Business & Market Depth</li>
@@ -20,15 +21,10 @@ const FundingScore = () => {
             
             <div className={styles.rightColumn}>
               <ul className={styles.criteriaList}>
-                <li>Founder Readiness</li>
                 <li>Business Scalability</li>
                 <li>Revenue & Market Depth</li>
               </ul>
             </div>
-          </div>
-          
-          <div className={styles.ctaWrapper}>
-            <button className={styles.ctaButton}>Get My Funding Score</button>
           </div>
         </div>
       </div>

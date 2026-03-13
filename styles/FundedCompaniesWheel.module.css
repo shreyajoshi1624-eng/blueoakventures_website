@@ -1,9 +1,9 @@
 .wheelSection {
-  padding: 2rem 2rem;
+  padding: 4rem 2rem;
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f8fafc 100%);
   overflow: hidden;
   position: relative;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 /* Abstract Background Elements */
@@ -111,8 +111,9 @@
 .splitLayout {
   display: grid;
   grid-template-columns: 55% 45%;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
+  min-height: 500px;
 }
 
 .leftSide {
@@ -128,14 +129,15 @@
 }
 
 .sectionTitle {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   text-align: left;
   background: linear-gradient(135deg, #2c5aa0 0%, #64b5f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
 }
 
 .sectionSubtitle {
@@ -592,43 +594,57 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .wheelSection {
+    padding: 2rem 1rem;
+  }
+
   .wheelContainer {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
+  }
+
+  .orbitCircle {
+    width: 300px;
+    height: 300px;
   }
 
   .companyLogo {
-    width: 60px;
-    height: 60px;
-    margin: -30px 0 0 -30px;
+    width: 55px;
+    height: 55px;
+    margin: -27.5px 0 0 -27.5px;
   }
 
-  .companyLogo:nth-child(1) { transform: rotate(0deg) translateX(160px) rotate(0deg); }
-  .companyLogo:nth-child(2) { transform: rotate(30deg) translateX(160px) rotate(-30deg); }
-  .companyLogo:nth-child(3) { transform: rotate(60deg) translateX(160px) rotate(-60deg); }
-  .companyLogo:nth-child(4) { transform: rotate(90deg) translateX(160px) rotate(-90deg); }
-  .companyLogo:nth-child(5) { transform: rotate(120deg) translateX(160px) rotate(-120deg); }
-  .companyLogo:nth-child(6) { transform: rotate(150deg) translateX(160px) rotate(-150deg); }
-  .companyLogo:nth-child(7) { transform: rotate(180deg) translateX(160px) rotate(-180deg); }
-  .companyLogo:nth-child(8) { transform: rotate(210deg) translateX(160px) rotate(-210deg); }
-  .companyLogo:nth-child(9) { transform: rotate(240deg) translateX(160px) rotate(-240deg); }
-  .companyLogo:nth-child(10) { transform: rotate(270deg) translateX(160px) rotate(-270deg); }
-  .companyLogo:nth-child(11) { transform: rotate(300deg) translateX(160px) rotate(-300deg); }
-  .companyLogo:nth-child(12) { transform: rotate(330deg) translateX(160px) rotate(-330deg); }
+  .companyLogo:nth-child(1) { transform: rotate(0deg) translateX(140px) rotate(0deg); }
+  .companyLogo:nth-child(2) { transform: rotate(30deg) translateX(140px) rotate(-30deg); }
+  .companyLogo:nth-child(3) { transform: rotate(60deg) translateX(140px) rotate(-60deg); }
+  .companyLogo:nth-child(4) { transform: rotate(90deg) translateX(140px) rotate(-90deg); }
+  .companyLogo:nth-child(5) { transform: rotate(120deg) translateX(140px) rotate(-120deg); }
+  .companyLogo:nth-child(6) { transform: rotate(150deg) translateX(140px) rotate(-150deg); }
+  .companyLogo:nth-child(7) { transform: rotate(180deg) translateX(140px) rotate(-180deg); }
+  .companyLogo:nth-child(8) { transform: rotate(210deg) translateX(140px) rotate(-210deg); }
+  .companyLogo:nth-child(9) { transform: rotate(240deg) translateX(140px) rotate(-240deg); }
+  .companyLogo:nth-child(10) { transform: rotate(270deg) translateX(140px) rotate(-270deg); }
+  .companyLogo:nth-child(11) { transform: rotate(300deg) translateX(140px) rotate(-300deg); }
+  .companyLogo:nth-child(12) { transform: rotate(330deg) translateX(140px) rotate(-330deg); }
 
   .centerLogo {
-    padding: 20px;
-    width: 140px;
-    height: 140px;
+    padding: 15px;
+    width: 120px;
+    height: 120px;
   }
 
   .blueOakLogo {
-    width: 100px !important;
-    height: 100px !important;
+    width: 90px !important;
+    height: 90px !important;
   }
 
   .sectionTitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .sectionSubtitle {
+    font-size: 0.85rem;
   }
 
   .popupContent {
@@ -636,64 +652,147 @@
   }
 
   .companyInitials {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .companyDetails {
+    padding: 1.25rem;
+  }
+
+  .detailsTitle {
+    font-size: 1.1rem;
+  }
+
+  .detailsLogoCircle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .detailsInitials {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
+  .wheelSection {
+    padding: 2rem 0.75rem;
+  }
+
   .wheelContainer {
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .orbitCircle {
+    width: 260px;
+    height: 260px;
   }
 
   .companyLogo {
-    width: 50px;
-    height: 50px;
-    margin: -25px 0 0 -25px;
+    width: 45px;
+    height: 45px;
+    margin: -22.5px 0 0 -22.5px;
   }
 
-  .companyLogo:nth-child(1) { transform: rotate(0deg) translateX(130px) rotate(0deg); }
-  .companyLogo:nth-child(2) { transform: rotate(30deg) translateX(130px) rotate(-30deg); }
-  .companyLogo:nth-child(3) { transform: rotate(60deg) translateX(130px) rotate(-60deg); }
-  .companyLogo:nth-child(4) { transform: rotate(90deg) translateX(130px) rotate(-90deg); }
-  .companyLogo:nth-child(5) { transform: rotate(120deg) translateX(130px) rotate(-120deg); }
-  .companyLogo:nth-child(6) { transform: rotate(150deg) translateX(130px) rotate(-150deg); }
-  .companyLogo:nth-child(7) { transform: rotate(180deg) translateX(130px) rotate(-180deg); }
-  .companyLogo:nth-child(8) { transform: rotate(210deg) translateX(130px) rotate(-210deg); }
-  .companyLogo:nth-child(9) { transform: rotate(240deg) translateX(130px) rotate(-240deg); }
-  .companyLogo:nth-child(10) { transform: rotate(270deg) translateX(130px) rotate(-270deg); }
-  .companyLogo:nth-child(11) { transform: rotate(300deg) translateX(130px) rotate(-300deg); }
-  .companyLogo:nth-child(12) { transform: rotate(330deg) translateX(130px) rotate(-330deg); }
+  .companyLogo:nth-child(1) { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+  .companyLogo:nth-child(2) { transform: rotate(30deg) translateX(120px) rotate(-30deg); }
+  .companyLogo:nth-child(3) { transform: rotate(60deg) translateX(120px) rotate(-60deg); }
+  .companyLogo:nth-child(4) { transform: rotate(90deg) translateX(120px) rotate(-90deg); }
+  .companyLogo:nth-child(5) { transform: rotate(120deg) translateX(120px) rotate(-120deg); }
+  .companyLogo:nth-child(6) { transform: rotate(150deg) translateX(120px) rotate(-150deg); }
+  .companyLogo:nth-child(7) { transform: rotate(180deg) translateX(120px) rotate(-180deg); }
+  .companyLogo:nth-child(8) { transform: rotate(210deg) translateX(120px) rotate(-210deg); }
+  .companyLogo:nth-child(9) { transform: rotate(240deg) translateX(120px) rotate(-240deg); }
+  .companyLogo:nth-child(10) { transform: rotate(270deg) translateX(120px) rotate(-270deg); }
+  .companyLogo:nth-child(11) { transform: rotate(300deg) translateX(120px) rotate(-300deg); }
+  .companyLogo:nth-child(12) { transform: rotate(330deg) translateX(120px) rotate(-330deg); }
 
   .centerLogo {
-    padding: 15px;
-    width: 110px;
-    height: 110px;
+    padding: 12px;
+    width: 100px;
+    height: 100px;
   }
 
   .blueOakLogo {
-    width: 80px !important;
-    height: 80px !important;
+    width: 76px !important;
+    height: 76px !important;
   }
 
   .sectionTitle {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    padding: 0 0.5rem;
   }
 
   .sectionSubtitle {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
   }
 
   .companyInitials {
+    font-size: 0.95rem;
+  }
+
+  .companyDetails {
+    padding: 1rem;
+  }
+
+  .detailsTitle {
     font-size: 1rem;
+  }
+
+  .detailsLogoCircle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .detailsInitials {
+    font-size: 1rem;
+  }
+
+  .infoRow {
+    padding: 0.6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .infoLabel {
+    font-size: 0.85rem;
+  }
+
+  .infoValue {
+    font-size: 0.95rem;
+  }
+
+  .successBadge {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .placeholderMessage {
+    padding: 1.5rem 1rem;
+  }
+
+  .placeholderIcon {
+    font-size: 2rem;
+  }
+
+  .placeholderMessage p {
+    font-size: 0.85rem;
   }
 }
 
 /* Split Layout Responsive */
 @media (max-width: 1024px) {
+  .wheelSection {
+    padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+
   .splitLayout {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
+    min-height: auto;
   }
 
   .leftSide {
@@ -702,10 +801,12 @@
 
   .rightSide {
     order: 1;
+    text-align: center;
   }
 
   .sectionTitle {
     text-align: center;
+    font-size: 1.75rem;
   }
 
   .sectionSubtitle {
@@ -715,6 +816,17 @@
   .wheelContainer {
     width: 400px;
     height: 400px;
+  }
+
+  .orbitCircle {
+    width: 340px;
+    height: 340px;
+  }
+
+  .companyLogo {
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
   }
 
   .companyLogo:nth-child(1) { transform: rotate(0deg) translateX(160px) rotate(0deg); }

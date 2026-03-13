@@ -8,6 +8,8 @@ const Contact = () => {
     startupName: '',
     description: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -16,10 +18,50 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
+    setIsSubmitting(true)
+    setSubmitMessage('')
+    
+    try {
+      // Google Apps Script Web App URL
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbygFS_5HGMcTyZ-RyV99gEdvLaLluqmRpl7ANaRHbP9K3QH9UbLwB8S8u27YqOn9i4/exec'
+      
+      const formDataToSend = {
+        name: formData.name,
+        email: formData.email,
+        startupName: formData.startupName,
+        description: formData.description,
+        timestamp: new Date().toLocaleString()
+      }
+
+      console.log('Sending data:', formDataToSend)
+
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify(formDataToSend),
+        headers: {
+          'Content-Type': 'text/plain',
+        },
+      })
+
+      console.log('Response status:', response.status)
+      const result = await response.text()
+      console.log('Response:', result)
+
+      setSubmitMessage('Thank you! Your application has been submitted successfully.')
+      setFormData({
+        name: '',
+        email: '',
+        startupName: '',
+        description: ''
+      })
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitMessage('Failed to send message. Please contact us directly at blueoakconsultation@gmail.com')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -37,6 +79,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
               />
               <input
                 type="email"
@@ -45,6 +88,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
               />
             </div>
             <div className={styles.formRow}>
@@ -55,6 +99,7 @@ const Contact = () => {
                 value={formData.startupName}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
               />
             </div>
             <textarea
@@ -64,9 +109,15 @@ const Contact = () => {
               value={formData.description}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
             />
-            <button type="submit" className={styles.btnPrimary}>
-              Submit Application
+            {submitMessage && (
+              <div className={styles.submitMessage}>
+                {submitMessage}
+              </div>
+            )}
+            <button type="submit" className={styles.btnPrimary} disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Submit Application'}
             </button>
           </form>
         </div>
