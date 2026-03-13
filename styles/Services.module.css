@@ -2,12 +2,11 @@
 .services {
   padding: 2.5rem 0;
   background: 
-    radial-gradient(circle at 30% 40%, rgba(44, 90, 160, 0.08) 1px, transparent 1px),
-    radial-gradient(circle at 70% 60%, rgba(100, 181, 246, 0.06) 1px, transparent 1px),
-    linear-gradient(45deg, rgba(44, 90, 160, 0.05) 1px, transparent 1px),
-    linear-gradient(-45deg, rgba(44, 90, 160, 0.04) 1px, transparent 1px),
-    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  background-size: 90px 90px, 130px 130px, 50px 50px, 70px 70px, 100% 100%;
+    radial-gradient(circle, rgba(150, 150, 150, 0.8) 1px, transparent 1px),
+    radial-gradient(circle, rgba(150, 150, 150, 0.8) 1px, transparent 1px),
+    linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
+  background-size: 30px 30px, 30px 30px, 100% 100%;
+  background-position: 0 0, 15px 15px, 0 0;
   position: relative;
   overflow: hidden;
 }
@@ -24,8 +23,8 @@
     45deg,
     transparent,
     transparent 80px,
-    rgba(44, 90, 160, 0.03) 80px,
-    rgba(44, 90, 160, 0.03) 82px
+    rgba(13, 115, 119, 0.08) 80px,
+    rgba(13, 115, 119, 0.08) 82px
   );
   animation: diagonalMove 20s linear infinite;
   z-index: 1;
@@ -64,20 +63,30 @@
 }
 
 .sectionHeader h2 {
-  color: #2c3e50;
+  color: #1a2332;
   margin-bottom: 1rem;
   font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: -1px;
-  background: linear-gradient(135deg, #2c3e50, #2c5aa0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionHeader h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #2c5aa0, #64b5f6, #2c5aa0);
+  border-radius: 2px;
 }
 
 .sectionHeader p {
   font-size: 1.2rem;
-  color: #7a8a99;
+  color: #b0b0b0;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -91,14 +100,15 @@
 }
 
 .serviceCard {
-  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
   padding: 2.5rem 2rem;
   border-radius: 25px;
   box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 10px 30px rgba(13, 115, 119, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   transition: all 0.4s ease;
-  border: 1px solid rgba(44, 90, 160, 0.1);
+  border: 2px solid transparent;
+  border-image: linear-gradient(135deg, rgba(244, 196, 48, 0.3), rgba(13, 115, 119, 0.3)) 1;
   position: relative;
   overflow: hidden;
   transform: translateY(0);
@@ -125,20 +135,20 @@
 .serviceCard:hover {
   transform: translateY(-5px);
   box-shadow: 
-    0 20px 40px rgba(44, 90, 160, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  border-color: rgba(44, 90, 160, 0.3);
+    0 20px 40px rgba(44, 90, 160, 0.3),
+    inset 0 1px 0 rgba(100, 181, 246, 0.5);
+  border-color: rgba(100, 181, 246, 0.5);
 }
 
 .serviceIcon {
   font-size: 3rem;
   margin-bottom: 1rem;
   display: block;
-  filter: drop-shadow(0 5px 15px rgba(44, 90, 160, 0.2));
+  filter: drop-shadow(0 5px 15px rgba(244, 196, 48, 0.3));
 }
 
 .serviceCard h3 {
-  color: #2c3e50;
+  color: #1a2332;
   margin-bottom: 0.5rem;
   font-size: 1.4rem;
   font-weight: 700;

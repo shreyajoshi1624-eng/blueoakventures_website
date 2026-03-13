@@ -1,6 +1,6 @@
 .whatIsOak1 {
   padding: 1.5rem 0;
-  background: white;
+  background: linear-gradient(135deg, #0d1b2a 0%, #1a2332 100%);
 }
 
 .container {
@@ -20,13 +20,13 @@
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
-  color: #2c3e50;
+  color: #e0e0e0;
   font-family: 'Playfair Display', serif;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #2c3e50;
+  color: #e0e0e0;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -37,12 +37,12 @@
 
 .subtitle em {
   font-style: italic;
-  color: #2c5aa0;
+  color: #f4c430;
 }
 
 .description {
   font-size: 1.1rem;
-  color: #64748b;
+  color: #b0b0b0;
   line-height: 1.7;
   margin: 0;
 }

@@ -2,12 +2,11 @@
 .approach {
   padding: 2.5rem 0;
   background: 
-    radial-gradient(circle at 40% 30%, rgba(39, 174, 96, 0.08) 1px, transparent 1px),
-    radial-gradient(circle at 60% 70%, rgba(46, 204, 113, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(39, 174, 96, 0.05) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(39, 174, 96, 0.04) 1px, transparent 1px),
-    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  background-size: 85px 85px, 125px 125px, 55px 55px, 75px 75px, 100% 100%;
+    radial-gradient(circle, rgba(150, 150, 150, 0.8) 1px, transparent 1px),
+    radial-gradient(circle, rgba(150, 150, 150, 0.8) 1px, transparent 1px),
+    linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
+  background-size: 30px 30px, 30px 30px, 100% 100%;
+  background-position: 0 0, 15px 15px, 0 0;
   position: relative;
   overflow: hidden;
 }
@@ -76,8 +75,8 @@
 }
 
 .sectionHeader h2 {
-  color: #2c3e50;
-  background: linear-gradient(135deg, #2c3e50, #2c5aa0);
+  color: #e0e0e0;
+  background: linear-gradient(135deg, #2c5aa0, #64b5f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -95,15 +94,16 @@
 }
 
 .approachCard {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
+  background: linear-gradient(135deg, #ffffff 0%, #fffef8 100%);
   backdrop-filter: blur(20px);
   padding: 2.5rem 2rem;
   border-radius: 25px;
   box-shadow: 
-    0 10px 25px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    0 10px 25px rgba(44, 90, 160, 0.08),
+    inset 0 1px 0 rgba(100, 181, 246, 0.1);
   transition: all 0.4s ease;
-  border: 1px solid rgba(44, 90, 160, 0.1);
+  border: 2px solid transparent;
+  border-image: linear-gradient(135deg, rgba(44, 90, 160, 0.2), rgba(100, 181, 246, 0.3)) 1;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -116,7 +116,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  background: linear-gradient(90deg, #2c5aa0, #64b5f6);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -128,13 +128,13 @@
 .approachCard:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  border-color: rgba(44, 90, 160, 0.3);
+    0 20px 40px rgba(100, 181, 246, 0.3),
+    inset 0 1px 0 rgba(44, 90, 160, 0.5);
+  border-color: rgba(100, 181, 246, 0.5);
 }
 
 .approachCard h3 {
-  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  background: linear-gradient(135deg, #2c5aa0, #64b5f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -144,7 +144,7 @@
 }
 
 .approachCard p {
-  color: #5a6c7d;
+  color: #b0b0b0;
   line-height: 1.6;
   font-size: 0.95rem;
   margin: 0;

@@ -3,13 +3,14 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
   z-index: 1000;
   padding: 1rem 0;
   transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(44, 90, 160, 0.1);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, #f4c430 0%, #14919b 50%, #f4c430 100%) 1;
+  box-shadow: 0 2px 20px rgba(13, 115, 119, 0.1);
 }
 
 .navbar::before {
@@ -19,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(44, 90, 160, 0.05), transparent);
+  background: linear-gradient(90deg, transparent, rgba(13, 115, 119, 0.15), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -61,7 +62,7 @@
   background: none;
   border: none;
   text-decoration: none;
-  color: #2c3e50;
+  color: #e0e0e0;
   font-weight: 500;
   font-size: 1.1rem;
   transition: all 0.3s ease;
@@ -88,13 +89,13 @@
 }
 
 .navLink:hover {
-  color: #2c5aa0;
+  color: #f4c430;
   transform: translateY(-2px);
 }
 
 .navMenu a {
   text-decoration: none;
-  color: #2c3e50;
+  color: #1a2332;
   font-weight: 500;
   font-size: 1.1rem;
   transition: all 0.3s ease;
@@ -119,7 +120,7 @@
 }
 
 .navMenu a:hover {
-  color: #2c5aa0;
+  color: #f4c430;
   transform: translateY(-2px);
 }
 
@@ -129,10 +130,10 @@
   padding: 1rem 2rem !important;
   border-radius: 50px !important;
   transition: all 0.3s ease !important;
-  box-shadow: 0 10px 30px rgba(44, 90, 160, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(13, 115, 119, 0.4) !important;
   position: relative !important;
   overflow: hidden !important;
-  border: none !important;
+  border: 1px solid rgba(244, 196, 48, 0.3) !important;
   cursor: pointer !important;
   font-family: inherit !important;
   font-size: 1.1rem !important;
@@ -156,7 +157,8 @@
 
 .ctaBtn:hover {
   transform: translateY(-3px) !important;
-  box-shadow: 0 20px 40px rgba(44, 90, 160, 0.4) !important;
+  box-shadow: 0 20px 40px rgba(244, 196, 48, 0.5) !important;
+  border-color: rgba(244, 196, 48, 0.6) !important;
 }
 
 /* Responsive */

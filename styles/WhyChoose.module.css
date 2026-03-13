@@ -2,11 +2,11 @@
 .whyChoose {
   padding: 2.5rem 0;
   background: 
-    radial-gradient(circle at 35% 25%, rgba(220, 53, 69, 0.08) 1px, transparent 1px),
-    radial-gradient(circle at 65% 75%, rgba(220, 53, 69, 0.06) 1px, transparent 1px),
-    linear-gradient(45deg, rgba(220, 53, 69, 0.05) 1px, transparent 1px),
-    linear-gradient(-45deg, rgba(220, 53, 69, 0.04) 1px, transparent 1px),
-    linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+    radial-gradient(circle at 35% 25%, rgba(13, 115, 119, 0.15) 1px, transparent 1px),
+    radial-gradient(circle at 65% 75%, rgba(244, 196, 48, 0.1) 1px, transparent 1px),
+    linear-gradient(45deg, rgba(13, 115, 119, 0.1) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(13, 115, 119, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, #0a1929 0%, #0d1b2a 100%);
   background-size: 95px 95px, 135px 135px, 65px 65px, 85px 85px, 100% 100%;
   position: relative;
   overflow: hidden;
@@ -81,9 +81,9 @@
 }
 
 .valueCard {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
+  background: linear-gradient(135deg, rgba(13, 115, 119, 0.2), rgba(26, 35, 50, 0.8));
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(44, 90, 160, 0.1);
+  border: 1px solid rgba(13, 115, 119, 0.3);
   padding: 2.5rem 2rem;
   border-radius: 25px;
   transition: all 0.4s ease;
@@ -99,7 +99,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(220, 53, 69, 0.05), transparent);
+  background: linear-gradient(90deg, transparent, rgba(244, 196, 48, 0.15), transparent);
   transition: left 0.6s ease;
 }
 
@@ -109,19 +109,19 @@
 
 .valueCard:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(220, 53, 69, 0.15);
-  border-color: rgba(220, 53, 69, 0.3);
+  box-shadow: 0 20px 40px rgba(244, 196, 48, 0.3);
+  border-color: rgba(244, 196, 48, 0.5);
 }
 
 .valueCard h3 {
-  color: #dc3545;
+  color: #f4c430;
   margin-bottom: 1rem;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
 .valueCard p {
-  color: #5a6c7d;
+  color: #b0b0b0;
   line-height: 1.6;
   font-size: 0.95rem;
   margin: 0;

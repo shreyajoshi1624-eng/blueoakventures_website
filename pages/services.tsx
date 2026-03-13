@@ -4,7 +4,7 @@ import ServicesAnnouncementBar from '../components/ServicesAnnouncementBar'
 import ClientEffects from '../components/ClientEffects'
 import ServicesHero from '../components/services/ServicesHero'
 import ServicesStats from '../components/services/ServicesStats'
-import WhatIsOak1 from '../components/services/WhatIsOak1'
+import FundedCompaniesWheel from '../components/FundedCompaniesWheel'
 import FundingScore from '../components/FundingScore'
 import Oak1Journey from '../components/services/Oak1Journey'
 import WhyOak1Different from '../components/services/WhyOak1Different'
@@ -25,7 +25,7 @@ export default function Services() {
       <ServicesHero />
       <ServicesStats />
       <ServicesAnnouncementBar />
-      <WhatIsOak1 />
+      <FundedCompaniesWheel />
       <FundingScore />
       <Oak1Journey />
       <WhyOak1Different />

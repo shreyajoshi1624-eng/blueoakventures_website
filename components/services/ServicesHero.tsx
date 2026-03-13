@@ -20,7 +20,7 @@ const ServicesHero = () => {
           </div>
           <div className={styles.heroImage}>
             <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=450&h=300&fit=crop&crop=faces"
+              src="/oak1imagehero.jpg"
               alt="Business meeting with professionals discussing funding"
               width={450}
               height={300}

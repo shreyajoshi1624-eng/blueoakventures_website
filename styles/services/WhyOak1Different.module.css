@@ -1,7 +1,7 @@
 /* Why Oak1 is Different - Modern Compact Design */
 .whyOak1Different {
   padding: 3rem 0;
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  background: linear-gradient(135deg, #0a1929 0%, #0d1b2a 100%);
   position: relative;
 }
 
@@ -19,14 +19,14 @@
 .title {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #1e293b;
+  color: #e0e0e0;
   margin-bottom: 0.8rem;
   font-family: 'Playfair Display', serif;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #64748b;
+  color: #b0b0b0;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -39,25 +39,25 @@
 }
 
 .card {
-  background: white;
+  background: linear-gradient(135deg, rgba(13, 115, 119, 0.2), rgba(26, 35, 50, 0.8));
   border-radius: 16px;
   padding: 2rem 1.5rem;
   text-align: center;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(13, 115, 119, 0.3);
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(44, 90, 160, 0.15);
-  border-color: #2c5aa0;
+  box-shadow: 0 12px 32px rgba(244, 196, 48, 0.3);
+  border-color: #f4c430;
 }
 
 .iconWrapper {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  background: linear-gradient(135deg, rgba(13, 115, 119, 0.3) 0%, rgba(20, 145, 155, 0.5) 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@
 }
 
 .card:hover .iconWrapper {
-  background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+  background: linear-gradient(135deg, #2c5aa0 0%, #64b5f6 100%);
   transform: scale(1.1);
 }
 
@@ -78,13 +78,13 @@
 .cardTitle {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #1e293b;
+  color: #e0e0e0;
   margin-bottom: 0.6rem;
 }
 
 .cardDescription {
   font-size: 0.95rem;
-  color: #64748b;
+  color: #b0b0b0;
   line-height: 1.5;
   margin: 0;
 }
@@ -97,27 +97,28 @@
 }
 
 .primaryBtn {
-  background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+  background: linear-gradient(135deg, #2c5aa0 0%, #64b5f6 100%);
   color: white;
-  border: none;
+  border: 2px solid rgba(244, 196, 48, 0.3);
   padding: 1rem 2.5rem;
   border-radius: 12px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(44, 90, 160, 0.3);
+  box-shadow: 0 4px 16px rgba(13, 115, 119, 0.4);
 }
 
 .primaryBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(44, 90, 160, 0.4);
+  box-shadow: 0 8px 24px rgba(244, 196, 48, 0.5);
+  border-color: rgba(244, 196, 48, 0.6);
 }
 
 .secondaryBtn {
-  background: white;
-  color: #2c5aa0;
-  border: 2px solid #2c5aa0;
+  background: rgba(13, 115, 119, 0.2);
+  color: #f4c430;
+  border: 2px solid #14919b;
   padding: 1rem 2.5rem;
   border-radius: 12px;
   font-size: 1rem;
@@ -127,10 +128,10 @@
 }
 
 .secondaryBtn:hover {
-  background: #2c5aa0;
+  background: #14919b;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(44, 90, 160, 0.3);
+  box-shadow: 0 8px 24px rgba(13, 115, 119, 0.4);
 }
 
 /* Responsive Design */

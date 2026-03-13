@@ -2,11 +2,11 @@
 .contactSection {
   padding: 2.5rem 0;
   background: 
-    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(135deg, #2c5aa0 0%, #1e3d6f 100%);
+    radial-gradient(circle at 30% 30%, rgba(44, 90, 160, 0.2) 1px, transparent 1px),
+    radial-gradient(circle at 70% 70%, rgba(100, 181, 246, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44, 90, 160, 0.15) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(44, 90, 160, 0.1) 1px, transparent 1px),
+    linear-gradient(135deg, #2c5aa0 0%, #0a1929 100%);
   background-size: 100px 100px, 150px 150px, 70px 70px, 90px 90px, 100% 100%;
   color: white;
   position: relative;
@@ -83,15 +83,15 @@
 }
 
 .contactForm {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(135deg, rgba(44, 90, 160, 0.2), rgba(26, 35, 50, 0.95));
   backdrop-filter: blur(20px);
   padding: 3rem;
   border-radius: 30px;
   margin-top: 2rem;
   box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(44, 90, 160, 0.3);
+  border: 1px solid rgba(44, 90, 160, 0.3);
 }
 
 .formRow {
@@ -104,20 +104,21 @@
 .contactForm input,
 .contactForm textarea {
   padding: 1.2rem;
-  border: 2px solid rgba(44, 90, 160, 0.2);
+  border: 2px solid rgba(44, 90, 160, 0.3);
   border-radius: 15px;
   font-size: 1rem;
   font-family: 'Crimson Text', serif;
   transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(26, 35, 50, 0.8);
   backdrop-filter: blur(10px);
+  color: #e0e0e0;
 }
 
 .contactForm input:focus,
 .contactForm textarea:focus {
   outline: none;
-  border-color: #2c5aa0;
-  box-shadow: 0 0 15px rgba(44, 90, 160, 0.2);
+  border-color: #64b5f6;
+  box-shadow: 0 0 15px rgba(100, 181, 246, 0.4);
   transform: translateY(-2px);
 }
 
@@ -130,7 +131,7 @@
 .btnPrimary {
   background: linear-gradient(135deg, #2c5aa0, #64b5f6);
   color: white;
-  border: none;
+  border: 2px solid rgba(100, 181, 246, 0.3);
   padding: 1.2rem 3rem;
   border-radius: 50px;
   font-size: 1.1rem;
@@ -138,7 +139,7 @@
   cursor: pointer;
   transition: all 0.4s ease;
   margin-top: 1.5rem;
-  box-shadow: 0 10px 25px rgba(44, 90, 160, 0.3);
+  box-shadow: 0 10px 25px rgba(44, 90, 160, 0.4);
   position: relative;
   overflow: hidden;
 }
@@ -160,7 +161,8 @@
 
 .btnPrimary:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(44, 90, 160, 0.4);
+  box-shadow: 0 20px 40px rgba(100, 181, 246, 0.5);
+  border-color: rgba(100, 181, 246, 0.6);
 }
 
 /* Responsive */
